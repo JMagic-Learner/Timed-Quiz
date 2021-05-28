@@ -7,7 +7,7 @@
 
 
 .clock-container {
-    background-color: blue;
+    background-color: orange;
     opacity:80%;
     margin:auto;
     padding:5%;
@@ -18,7 +18,7 @@
 }
 
 #question-container{
-    background-color: cyan;
+    background-color: orange;
     opacity:50%;
     margin-top:3%;
 
