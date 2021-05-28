@@ -1,0 +1,36 @@
+* {
+    margin:auto;
+    text-align:center;
+    width:80%;
+
+}
+
+
+.clock-container {
+    background-color: blue;
+    opacity:80%;
+    margin:auto;
+    padding:5%;
+}
+
+#time-clock{
+    text-align:center;
+}
+
+#question-container{
+    background-color: cyan;
+    opacity:50%;
+    margin-top:3%;
+
+}
+
+ul {
+    margin-top:3%;
+    list-style: none;
+    margin:auto;
+}
+
+.list-choice {
+    
+    margin-top:1%;
+}
