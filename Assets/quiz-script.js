@@ -4,7 +4,7 @@ var questionDisplay = document.querySelector("#question");
 var answerA = document.querySelector("#choiceA");
 var answerB = document.querySelector("#choiceB");
 var answerC = document.querySelector("#choiceC");
-var questionARRAY = [ 0 , 1 , 2 ];
+var questionARRAY = [ 0 , 1 , 2 , 3];
 var timeHost = 500;
 var correct = localStorage.getItem("correct");
 var incorrect = 0;
@@ -34,8 +34,9 @@ function clockDown() {
         timeDisplay.textContent = timeHost + "seconds";
         console.log( timeHost );
              
-        if (timeHost === 0) {
+        if (timeHost <= 0) {
         clearInterval(timer);
+        return
         }
 
         }, 1000);
@@ -73,6 +74,17 @@ function questionSelector() {
         answerA.addEventListener("click", incorrectUP)
         answerB.addEventListener("click", incorrectUP)
         answerC.addEventListener("click", correctUP);
+    } else if (questionARRAY[3] == randCHOICE | correct == 3) {
+        console.log ("Question 4 has been chosen");
+        questionDisplay.textContent = "Which of the below answers is correctly syntaxed";
+        answerA.textContent = "var htmlSelect = querySelector('.class');";
+        answerB.textContent = "if ( i = 0, i < numericalValue, i++ ) { }";
+        answerC.textContent = "localStorage.setItem( value , value)";
+        answerA.addEventListener("click", incorrectUP);
+        answerB.addEventListener("click", incorrectUP);
+        answerC.addEventListener("click", correctUP);
+    } else if (timeHost <= 0) {
+        return;
     }
 
 
@@ -119,7 +131,7 @@ function start() {
     questionSelector();
     if (timeHost <= 0) {
         timeHost == 0;
-        return;
+        return timeHost;
     }
 }
 
