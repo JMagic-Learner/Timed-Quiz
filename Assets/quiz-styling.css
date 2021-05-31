@@ -4,18 +4,27 @@
     width:80%;
 
 }
+
+.banner {
+    z-index: -1;
+}
+
+.overlay {
+    z-index: 1;
+    font-size: 5vw;
+}
+
+
 .container-styling {
     background-color: lightgrey;
     border-radius:40px;
-    
-
 }
 
 .clock-container {
     
     background-color: orange;
     opacity:80%;
-    margin:auto;
+    
     padding:5%;
     border-radius:40px;
 }
@@ -42,4 +51,28 @@ ul {
     margin-left:5%;
     margin-top:1%;
     padding:1%;
+}
+
+@media screen and (max-width: 780px) {
+ 
+    .banner {
+        height: 120%;
+       }
+   
+    #question-container{
+        width:70%;
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+
+    .container-styling {
+        background-color: lightgrey;
+        border-radius:40px;
+        width:100%;
+    }
+
+
+    #multiple-choice {
+        width:100%;
+    }
 }
